@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobile Alarm Controller | Premium Web Trigger</title>
+  <meta name="description" content="A premium offline-friendly web controller that triggers alarm sounds on your paired Android device using Firebase Realtime Database.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <h1>Cloud Alarm</h1>
+      <p class="subtitle">Trigger your mobile device alarm instantly</p>
+
+      <!-- Connection Status -->
+      <div id="statusIndicator" class="status-indicator">
+        <span class="status-dot"></span>
+        <span id="statusText">Connecting to Cloud...</span>
+      </div>
+
+      <!-- Trigger Area -->
+      <div class="trigger-container">
+        <div class="pulse-ring"></div>
+        <div class="pulse-ring"></div>
+        <div class="pulse-ring"></div>
+        
+        <button id="triggerBtn" class="trigger-btn" disabled>
+          <svg viewBox="0 0 24 24">
+            <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.9 2 2 2zm6-6v-5c0-3.07-1.63-5.64-4.5-6.32V4c0-.83-.67-1.5-1.5-1.5s-1.5.67-1.5 1.5v.68C7.64 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2zm-2 1H8v-6c0-2.48 1.51-4.5 4-4.5s4 2.02 4 4.5v6z"/>
+          </svg>
+          <span id="btnText">READY</span>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>
