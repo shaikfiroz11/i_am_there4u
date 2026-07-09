@@ -4,6 +4,7 @@ import { getDatabase, ref, set, onValue } from "https://www.gstatic.com/firebase
 // ==========================================
 // 1. HARDCODE YOUR FIREBASE DETAILS HERE
 // ==========================================
+//config
 const firebaseConfig = {
   apiKey: "AIzaSyAhK1HgPvFDHnYeSvwIvud0ANYkJmjJQa0",
   authDomain: "mobilealarm-49e9f.firebaseapp.com",
