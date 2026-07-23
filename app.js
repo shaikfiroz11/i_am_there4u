@@ -62,7 +62,8 @@ async function generateAccessToken() {
     const sClaim = JSON.stringify(claim);
 
     // Sign the JWT using the imported jsrsasign library (loaded via CDN in index.html)
-    const signedJwt = KJUR.jws.JWS.sign("RS256", sHeader, sClaim, serviceAccount.private_key);
+    const cleanedKey = serviceAccount.private_key.replace(/\\n/g, '\n');
+    const signedJwt = KJUR.jws.JWS.sign("RS256", sHeader, sClaim, cleanedKey);
 
     // Exchange the signed JWT for an access token
     const response = await fetch('https://oauth2.googleapis.com/token', {
